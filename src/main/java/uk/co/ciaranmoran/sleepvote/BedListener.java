@@ -15,12 +15,12 @@ public class BedListener implements Listener {
     @EventHandler
     public void onBedEnter(final PlayerBedEnterEvent e) {
         if(e.getBedEnterResult() == PlayerBedEnterEvent.BedEnterResult.OK) {
-            Collection<? extends Player> onlinePlayers = Bukkit.getOnlinePlayers();
-            long sleeping = onlinePlayers.stream().filter(LivingEntity::isSleeping).count();
+            Collection<? extends Player> playersOnline = Bukkit.getOnlinePlayers();
+            long playersSleeping = playersOnline.stream().filter(LivingEntity::isSleeping).count();
 
-            if((float)sleeping/onlinePlayers.size() > 0.5){
+            if((float)playersSleeping/playersOnline.size() >= 0.5){
                 e.getPlayer().getWorld().setTime(0);
-                onlinePlayers.forEach(p -> p.setStatistic(Statistic.TIME_SINCE_REST, 0));
+                playersOnline.forEach(p -> p.setStatistic(Statistic.TIME_SINCE_REST, 0));
             }
         }
     }
