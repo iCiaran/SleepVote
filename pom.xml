@@ -4,7 +4,7 @@
 
     <groupId>uk.co.ciaranmoran</groupId>
     <artifactId>SleepVote</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.3</version>
     <properties>
         <author>Ciaran Moran</author>
         <description>Plugin to allow the night cycle to be triggered when not all online players are in beds</description>
@@ -46,7 +46,7 @@
         <connection>scm:git:https://github.com/iCiaran/SleepVote.git</connection>
         <url>https://github.com/iCiaran/SleepVote</url>
         <developerConnection>scm:git:https://github.com/iCiaran/SleepVote.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>SleepVote-0.3</tag>
     </scm>
 
     <build>
